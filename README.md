@@ -1,7 +1,6 @@
 Auditory-eeg-challenge-2024
 ================================
 This is the codebase for the [2024 ICASSP Auditory EEG challenge](https://exporl.github.io/auditory-eeg-challenge-2024).
-This codebase contains baseline models and code to preprocess stimuli for both tasks.
 ### Group: 7
 ### Team Leader: 林立上
 ### Members: 蔡承翰 林榮翼 黃諺霖 林諺瓏
@@ -66,9 +65,9 @@ OK, you should be all setup now!
 
     
 
-# Running the tasks
+# Running the task
 
-Each task has already some ready-to-go experiments files defined to give you a
+The task has already some ready-to-go experiments files defined to give you a
 baseline and make you acquainted with the problem. The experiment files live
 in the `experiment` subfolder for each task. The training log,
 best model and evaluation results will be stored in a folder called
@@ -83,17 +82,3 @@ you can train the dilated convolutional model introduced by Accou et al. [(2021a
 Other models you might find interesting are [Decheveigné et al (2021)](https://www.sciencedirect.com/science/article/pii/S1053811918300338), [Monesi et al. (2020)](https://ieeexplore.ieee.org/abstract/document/9054000), [Monesi et al. (2021)](https://arxiv.org/abs/2106.09622),….
 
 See more information about Task1 at [Task 1: Match-mismatch](https://exporl.github.io/auditory-eeg-challenge-2024/task1/description/)
-
-
-
-## Task2: Regression (reconstructing spectrogram from EEG)
-
-By running [task2_regression/experiments/linear_baseline.py](./task2_regression/experiments/linear_baseline.py), you can 
-train and evaluate a simple linear baseline model with Pearson correlation as a loss function, similar to the baseline model used in [Accou et al (2022)](https://www.biorxiv.org/content/10.1101/2022.09.28.509945).
-
-By running [task2_regression/experiments/vlaai.py](./task2_regression/experiments/vlaai.py), you can train/evaluate
-the VLAAI model as proposed by [Accou et al (2022)](https://www.biorxiv.org/content/10.1101/2022.09.28.509945). You can find a pre-trained model at [VLAAI's github page](https://github.com/exporl/vlaai).
-
-Other models you might find interesting are: [Thornton et al. (2022)](https://iopscience.iop.org/article/10.1088/1741-2552/ac7976),...
-
-See more information about Task2 at [Task 2: Regression](https://exporl.github.io/auditory-eeg-challenge-2024/task2/description/)
