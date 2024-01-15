@@ -18,8 +18,8 @@ Ensure that you have Python 3.6 or a later version installed on your system, as 
 python3 -m install requirements.txt
 ```
 
-3. To acquire the dataset for our model, please proceed to download the data provided. 
-Specifically, navigate to the `split_data` folder, as it houses the preprocessed data that is ready for use in our model.
+3. To acquire the dataset for our model, please proceed to [download the data provided](https://drive.google.com/file/d/19oTqfCzovGbtwqHMtIEZL_8XFRGmmwU1/view?usp=sharing)  
+Specifically, this folder houses the preprocessed data that is ready for use in our model.
 
 4. To ensure proper configuration, please make adjustments in the `config.json` file. 
 Specifically, locate the `dataset_folder` parameter within the file and update its value from `null` to the absolute path leading to the directory housing all pertinent data. In our model, change its value to the path of `split_data`
