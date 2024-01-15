@@ -7,6 +7,38 @@ NTHU eegnet Auditory-eeg-challenge-2024
 
 # Performance
 
+We've tried multiple methodologies to enhance the performance of our model. The graphical representation below encapsulates our journey, presenting both the accuracy and loss metrics:
+<div align="center">
+    <a href="./">
+        <img src="./figures/plots.png" width="70%"/>
+    </a>
+  <p>Final score of our submission</p>
+</div>
+<br></br>
+Here is our ultimate score in the challenge, captured in the image below, extracted directly from the leaderboard snapshot:
+<div align="center">
+    <a href="./">
+        <img src="./figures/submission2score.png" width="30%"/>
+    </a>
+</div>
+<br></br>
+<br></br>
+
+We secured the **46th** position out of **105** submissions. Below, you'll find a comparative analysis of scores, encompassing the baseline, Team MLG (the counterpart focusing on the same topic), and our performance.
+
+<div align="center">
+  
+| Team | Submission Number | Subjects Mean | Subjects Std | Final Score | Ranking |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| **eegnet** | **2** | **53.11** | **12.81** | **53.11** | **46** |
+| MLG | 2 | 52.18 | 13.02 | 52.18 | 59 |
+| MLG | 1 | 51.59 | 13.86 | 51.59 | 65 |
+| eegnet | 1 | 51.38 | 12.79 | 51.38 | 66 |
+| baseline | . | 50.74 | 12.71 | 50.74 | . |
+
+</div>
+
+
 # Getting Started
 
 1. Check the installed version of Python using the following command:
