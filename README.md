@@ -5,6 +5,8 @@ NTHU eegnet Auditory-eeg-challenge-2024
 ### Members: 蔡承翰 林榮翼 黃諺霖 林諺瓏
 ### Mentor: 林家合
 
+# Performance
+
 # Getting Started
 
 1. Check the installed version of Python using the following command:
