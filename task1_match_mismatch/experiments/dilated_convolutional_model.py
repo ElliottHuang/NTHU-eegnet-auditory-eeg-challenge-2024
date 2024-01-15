@@ -9,9 +9,9 @@ import sys
 # add base path to sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 from task1_match_mismatch.models.dilated_convolutional_model import dilation_model
-
+from single_feature import lstm_mel
 from util.dataset_generator import DataGenerator, batch_equalizer_fn, create_tf_dataset
-
+from util2 import DotLayer
 
 def evaluate_model(model, test_dict):
     """Evaluate a model.
@@ -49,9 +49,9 @@ if __name__ == "__main__":
     hop_length = 64
 
     epochs = 100
-    patience = 5
+    patience = 10
     batch_size = 64
-    only_evaluate = True
+    only_evaluate = False
     number_mismatch = 4 # or 4
 
 
@@ -75,32 +75,45 @@ if __name__ == "__main__":
     data_folder = os.path.join(config["dataset_folder"], config['derivatives_folder'], config["split_folder"])
 
     # stimulus feature which will be used for training the model. Can be either 'envelope' ( dimension 1) or 'mel' (dimension 28)
-    stimulus_features = ["envelope"]
-    stimulus_dimension = 1
+    # stimulus_features = ["envelope"]
+    # stimulus_dimension = 1
 
     # uncomment if you want to train with the mel spectrogram stimulus representation
-    # stimulus_features = ["mel"]
-    # stimulus_dimension = 10
+    stimulus_features = ["mel"]
+    stimulus_dimension = 10
 
     features = ["eeg"] + stimulus_features
 
     # Create a directory to store (intermediate) results
     results_folder = os.path.join(experiments_folder, "results_dilated_convolutional_model_{}_MM_{}_s_{}".format(number_mismatch, window_length_s, stimulus_features[0]))
     os.makedirs(results_folder, exist_ok=True)
-
+    print(stimulus_dimension)
     # create dilation model
-    model = dilation_model(time_window=window_length, eeg_input_dimension=64, env_input_dimension=stimulus_dimension, num_mismatched_segments = number_mismatch)
-
+    # #
+    # model = lstm_mel(time_window=window_length, eeg_input_dimension=64, env_input_dimension=stimulus_dimension, num_mismatched_segments = number_mismatch)
+    model = lstm_mel(shape_eeg = [window_length,64], shape_spch = [window_length,stimulus_dimension],num_mismatched_segments = number_mismatch)
     model_path = os.path.join(results_folder, "model_{}_MM_{}_s_{}.h5".format(number_mismatch, window_length_s, stimulus_features[0]))
 
     if only_evaluate:
-        model = tf.keras.models.load_model(model_path)
+        # model = tf.keras.models.load_model(model_path)
+        model = tf.keras.models.load_model(model_path, custom_objects={'DotLayer': DotLayer})
 
     else:
 
         train_files = [x for x in glob.glob(os.path.join(data_folder, "train_-_*")) if os.path.basename(x).split("_-_")[-1].split(".")[0] in features]
-        # Create list of numpy array files
-        train_generator = DataGenerator(train_files, window_length)
+        # print('train_files',len(train_files))
+        # print(len(DataGenerator(train_files, window_length)))
+        # Create list of numpy array files        
+        # test_files = [x for x in glob.glob(os.path.join(data_folder, "test_-_*")) if
+        #                   os.path.basename(x).split("_-_")[-1].split(".")[0] in features]
+
+        # print('val_files',len(test_files))
+        # print(len(DataGenerator(test_files, window_length)))
+        
+        all_files = train_files 
+        # print('all_files',len(all_files))
+
+        train_generator = DataGenerator(all_files, window_length)
         import pdb
         dataset_train = create_tf_dataset(train_generator, window_length, batch_equalizer_fn,
                                           hop_length, batch_size,
@@ -109,14 +122,26 @@ if __name__ == "__main__":
                                           feature_dims=(64, stimulus_dimension))
 
         # Create the generator for the validation set
+        # val_files = [x for x in glob.glob(os.path.join(data_folder, "val_-_*")) if os.path.basename(x).split("_-_")[-1].split(".")[0] in features]
+        # print('test_files',len(test_files))
+        # print(len(DataGenerator(test_files, window_length)))
         val_files = [x for x in glob.glob(os.path.join(data_folder, "val_-_*")) if os.path.basename(x).split("_-_")[-1].split(".")[0] in features]
+
         val_generator = DataGenerator(val_files, window_length)
+        
         dataset_val = create_tf_dataset(val_generator,  window_length, batch_equalizer_fn,
                                           hop_length, batch_size,
                                           number_mismatch=number_mismatch,
                                           data_types=(tf.float32, tf.float32),
                                           feature_dims=(64, stimulus_dimension))
 
+        # #
+        # model.compile(
+        #     optimizer='adam',
+        #     loss={'output_1': 'binary_crossentropy', 'output_2': 'mean_squared_error'},
+        #     metrics={'output_1': 'accuracy', 'output_2': 'mae'}
+        # )
+        
 
         # Train the model
         model.fit(
@@ -130,15 +155,14 @@ if __name__ == "__main__":
             ],
         )
 
-    test_window_lengths = [3,5]
-    number_mismatch_test = [2,3,4, 8]
+    test_window_lengths = [5]
+    number_mismatch_test = [4]
     for number_mismatch in number_mismatch_test:
         for window_length_s in test_window_lengths:
             window_length = window_length_s * fs
             results_filename = 'eval_{}_{}_s.json'.format(number_mismatch, window_length_s)
-
-            model = dilation_model(time_window=window_length, eeg_input_dimension=64,
-                                   env_input_dimension=stimulus_dimension, num_mismatched_segments=number_mismatch)
+# 
+            model = lstm_mel(shape_eeg = [window_length,64], shape_spch = [window_length,stimulus_dimension],num_mismatched_segments = number_mismatch)
 
             model.load_weights(model_path)
             # Evaluate the model on test set
