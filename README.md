@@ -48,7 +48,7 @@ We secured the **46th** position out of **105** submissions. Below, you'll find 
 | baseline | . | 50.74 | 12.71 | 50.74 | . |
 
 </div>
-
+<br></br>
 
 # Getting Started
 
@@ -68,5 +68,6 @@ Specifically, this folder houses the preprocessed data that is ready for use in 
 
 4. To ensure proper configuration, please make adjustments in the `config.json` file. 
 Specifically, locate the `dataset_folder` parameter within the file and update its value from `null` to the absolute path leading to the directory housing all pertinent data. In our model, change its value to the path of `split_data`
+<br></br>
 
 # Run the Task
