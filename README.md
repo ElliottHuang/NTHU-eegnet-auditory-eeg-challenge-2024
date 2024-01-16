@@ -1,4 +1,4 @@
-NTHU eegnet Auditory-eeg-challenge-2024
+NTHU eggnet Auditory-eeg-challenge-2024
 =======================================
 ### Group 7, Introduction to Machine Learning
 
@@ -64,7 +64,7 @@ Here is our ultimate score in the challenge, captured in the image below, extrac
 <br></br>
 <br></br>
 
-We secured the **46th** position out of **105** submissions. Below, you'll find a comparative analysis of scores, encompassing the baseline, Team MLG (the counterpart focusing on the same topic), and our performance.
+We secured the **24th** position out of **60** teams. Below, you'll find a comparative analysis of scores, encompassing the baseline, Team MLG (the counterpart focusing on the same topic), and our performance.
 
 <div align="center">
   
@@ -78,5 +78,4 @@ We secured the **46th** position out of **105** submissions. Below, you'll find 
 
 </div>
 <br></br>
-
 
