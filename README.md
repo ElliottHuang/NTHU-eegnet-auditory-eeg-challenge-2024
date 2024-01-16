@@ -44,7 +44,55 @@ python dilated_convolutional_model.py
 ```
 This command is designed for both training and testing the model. Simply run it to initiate the desired operation.
 
+# Model Training Output Example
+
 If you run the code successfully, the model will start training and print the training statistics.
+
+```text
+Epoch 1/100
+7082/7082 [==============================] - 1226s 172ms/step - loss: 1.0915 - accuracy: 0.5653 - val_loss: 1.4165 - val_accuracy: 0.4882
+Epoch 2/100
+7082/7082 [==============================] - 1204s 170ms/step - loss: 0.9989 - accuracy: 0.6137 - val_loss: 1.1126 - val_accuracy: 0.5592
+Epoch 3/100
+7082/7082 [==============================] - 1217s 172ms/step - loss: 0.9386 - accuracy: 0.6389 - val_loss: 1.0767 - val_accuracy: 0.5804
+Epoch 4/100
+7082/7082 [==============================] - 1225s 173ms/step - loss: 0.8983 - accuracy: 0.6563 - val_loss: 1.1335 - val_accuracy: 0.5502
+Epoch 5/100
+7082/7082 [==============================] - 1211s 171ms/step - loss: 0.8687 - accuracy: 0.6676 - val_loss: 0.9795 - val_accuracy: 0.6186
+Epoch 6/100
+7082/7082 [==============================] - 1209s 171ms/step - loss: 0.8466 - accuracy: 0.6765 - val_loss: 0.9942 - val_accuracy: 0.6120
+Epoch 7/100
+7082/7082 [==============================] - 1210s 171ms/step - loss: 0.8262 - accuracy: 0.6860 - val_loss: 1.1198 - val_accuracy: 0.5572
+Epoch 8/100
+7082/7082 [==============================] - 1209s 171ms/step - loss: 0.8105 - accuracy: 0.6912 - val_loss: 0.9590 - val_accuracy: 0.6243
+Epoch 9/100
+7082/7082 [==============================] - 1209s 171ms/step - loss: 0.7968 - accuracy: 0.6963 - val_loss: 0.9493 - val_accuracy: 0.6341
+...
+```
+
+```text
+639/639 - 18s - loss: 1.2018 - accuracy: 0.5196
+558/558 - 12s - loss: 1.1811 - accuracy: 0.5333
+749/749 - 16s - loss: 0.7837 - accuracy: 0.7095
+613/613 - 13s - loss: 0.5439 - accuracy: 0.7993
+639/639 - 14s - loss: 1.4661 - accuracy: 0.4122
+826/826 - 18s - loss: 0.9582 - accuracy: 0.6259
+298/298 - 6s - loss: 1.6356 - accuracy: 0.3705
+613/613 - 13s - loss: 0.9958 - accuracy: 0.6189
+549/549 - 12s - loss: 0.7300 - accuracy: 0.7173
+815/815 - 17s - loss: 0.8568 - accuracy: 0.6616
+826/826 - 17s - loss: 1.3676 - accuracy: 0.4906
+826/826 - 17s - loss: 1.0536 - accuracy: 0.5976
+535/535 - 11s - loss: 1.2430 - accuracy: 0.5077
+535/535 - 11s - loss: 1.2065 - accuracy: 0.5364
+639/639 - 13s - loss: 1.1520 - accuracy: 0.5612
+303/303 - 6s - loss: 2.0578 - accuracy: 0.2561
+536/536 - 11s - loss: 0.8785 - accuracy: 0.6634
+558/558 - 12s - loss: 1.2344 - accuracy: 0.4792
+558/558 - 11s - loss: 0.7200 - accuracy: 0.7409
+826/826 - 17s - loss: 0.8283 - accuracy: 0.6712
+...
+```
 
 # Performance
 
