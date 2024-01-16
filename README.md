@@ -11,42 +11,7 @@ This repository documents the methodologies and implementation strategies utiliz
   <p>Schematic overview of the task</p>
 </div>
 <br></br>
-Our approach leverages Long Short-Term Memory (LSTM) networks within the model, leading to Team eggnet securing the 46th position out of 105 teams in the competition. 
-
-# Performance
-
-We've tried multiple methodologies to enhance the performance of our model. The graphical representation below encapsulates our journey, presenting both the accuracy and loss metrics:
-<div align="center">
-    <a href="./">
-        <img src="./figures/plots.png" width="70%"/>
-    </a>
-  <p>Training and validation accuracy/loss plots</p>
-</div>
-<br></br>
-Here is our ultimate score in the challenge, captured in the image below, extracted directly from the leaderboard snapshot:
-<div align="center">
-    <a href="./">
-        <img src="./figures/submission2score.png" width="30%"/>
-    </a>
-    <p>Final score of our submission</p>
-</div>
-<br></br>
-<br></br>
-
-We secured the **46th** position out of **105** submissions. Below, you'll find a comparative analysis of scores, encompassing the baseline, Team MLG (the counterpart focusing on the same topic), and our performance.
-
-<div align="center">
-  
-| Team | Submission Number | Subjects Mean | Subjects Std | Final Score | Ranking |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| **eggnet** | **2** | **53.11** | **12.81** | **53.11** |
-| MLG | 2 | 52.18 | 13.02 | 52.18 |
-| MLG | 1 | 51.59 | 13.86 | 51.59 |
-| eggnet | 1 | 51.38 | 12.79 | 51.38 |
-| baseline | . | 50.74 | 12.71 | 50.74 |
-
-</div>
-<br></br>
+Our approach leverages Long Short-Term Memory (LSTM) networks within the model, leading to Team eggnet securing the 24th position out of 60 teams in the competition. 
 
 # Getting Started
 
@@ -78,3 +43,40 @@ Navigate to the "experiments" folder within the "task1_match_mismatch" directory
 python dilated_convolutional_model.py
 ```
 This command is designed for both training and testing the model. Simply run it to initiate the desired operation.
+
+# Performance
+
+We've tried multiple methodologies to enhance the performance of our model. The graphical representation below encapsulates our journey, presenting both the accuracy and loss metrics:
+<div align="center">
+    <a href="./">
+        <img src="./figures/plots.png" width="70%"/>
+    </a>
+  <p>Training and validation accuracy/loss plots</p>
+</div>
+<br></br>
+Here is our ultimate score in the challenge, captured in the image below, extracted directly from the leaderboard snapshot:
+<div align="center">
+    <a href="./">
+        <img src="./figures/submission2score.png" width="30%"/>
+    </a>
+    <p>Final score of our submission</p>
+</div>
+<br></br>
+<br></br>
+
+We secured the **46th** position out of **105** submissions. Below, you'll find a comparative analysis of scores, encompassing the baseline, Team MLG (the counterpart focusing on the same topic), and our performance.
+
+<div align="center">
+  
+| Team | Submission Number | Subjects Mean | Subjects Std | Final Score |
+| :-: | :-: | :-: | :-: | :-: |
+| **eggnet** | **2** | **53.11** | **12.81** | **53.11** |
+| MLG | 2 | 52.18 | 13.02 | 52.18 |
+| MLG | 1 | 51.59 | 13.86 | 51.59 |
+| eggnet | 1 | 51.38 | 12.79 | 51.38 |
+| baseline | . | 50.74 | 12.71 | 50.74 |
+
+</div>
+<br></br>
+
+
