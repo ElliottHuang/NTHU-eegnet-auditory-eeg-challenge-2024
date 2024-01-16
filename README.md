@@ -7,6 +7,13 @@ NTHU eegnet Auditory-eeg-challenge-2024
 
 This repository documents the methodologies and implementation strategies utilized by Team eggnet from National Tsing Hua University to address Task 1 of the Auditory EEG Challenge at ICASSP 2024. The main goal of this task was to precisely identify the correct auditory stimulus corresponding to a given EEG segment from a set of five candidates.
 
+<div align="center">
+    <a href="./">
+        <img src="./figures/task1.png" width="70%"/>
+    </a>
+  <p>Schematic overview of the task</p>
+</div>
+<br></br>
 Our approach leverages Long Short-Term Memory (LSTM) networks within the model, leading to Team eggnet securing the 46th position out of 105 teams in the competition. 
 
 # Performance
