@@ -71,3 +71,9 @@ Specifically, locate the `dataset_folder` parameter within the file and update i
 <br></br>
 
 # Run the Task
+
+Navigate to the "experiments" folder within the "task1_match_mismatch" directory and execute the following command:
+```bash
+python dilated_convolutional_model.py
+```
+This command is designed for both training and testing the model. Simply run it to initiate the desired operation.
