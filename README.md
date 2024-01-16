@@ -64,10 +64,12 @@ python3 -m install requirements.txt
 ```
 
 3. To acquire the dataset for our model, please proceed to [download the data provided](https://homes.esat.kuleuven.be/~lbollens)
-using the password provided when you registered.  
+using the password provided when you registered.
+
 Specifically, the `split_data` folder houses the preprocessed data that is ready for use in our model.
 
-4. To ensure proper configuration, please make adjustments in the `config.json` file. 
+4. To ensure proper configuration, please make adjustments in the `config.json` file.
+
 Specifically, locate the `dataset_folder` parameter within the file and update its value from `null` to the absolute path leading to the directory housing all pertinent data. In our model, change its value to the path of `split_data`
 <br></br>
 
