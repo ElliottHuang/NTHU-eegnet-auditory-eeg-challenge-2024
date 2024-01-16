@@ -46,16 +46,6 @@ This command is designed for both training and testing the model. Simply run it 
 
 If you run the code successfully, the model will start training and print the training statistics.
 
-<div align="center">
-    <a href="./">
-        <img src="./figures/model1.png" width="40%"/>
-    </a>
-    <a href="./">
-        <img src="./figures/model2.png" width="40%"/>
-    </a>
-</div>
-<br></br>
-
 # Performance
 
 We've tried multiple methodologies to enhance the performance of our model. The graphical representation below encapsulates our journey, presenting both the accuracy and loss metrics:
