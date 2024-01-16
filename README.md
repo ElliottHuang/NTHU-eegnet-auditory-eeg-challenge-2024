@@ -1,9 +1,6 @@
 NTHU eegnet Auditory-eeg-challenge-2024
 =======================================
-### Group: 7
-### Team Leader: 林立上
-### Members: 蔡承翰 林榮翼 黃諺霖 林諺瓏
-### Mentor: 林家合
+### Group 7, Introduction to Machine Learning
 
 This repository documents the methodologies and implementation strategies utilized by Team eggnet from National Tsing Hua University to address Task 1 of the Auditory EEG Challenge at ICASSP 2024. The main goal of this task was to precisely identify the correct auditory stimulus corresponding to a given EEG segment from a set of five candidates.
 
@@ -42,11 +39,11 @@ We secured the **46th** position out of **105** submissions. Below, you'll find 
   
 | Team | Submission Number | Subjects Mean | Subjects Std | Final Score | Ranking |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| **eegnet** | **2** | **53.11** | **12.81** | **53.11** | **46** |
-| MLG | 2 | 52.18 | 13.02 | 52.18 | 59 |
-| MLG | 1 | 51.59 | 13.86 | 51.59 | 65 |
-| eegnet | 1 | 51.38 | 12.79 | 51.38 | 66 |
-| baseline | . | 50.74 | 12.71 | 50.74 | . |
+| **eggnet** | **2** | **53.11** | **12.81** | **53.11** |
+| MLG | 2 | 52.18 | 13.02 | 52.18 |
+| MLG | 1 | 51.59 | 13.86 | 51.59 |
+| eggnet | 1 | 51.38 | 12.79 | 51.38 |
+| baseline | . | 50.74 | 12.71 | 50.74 |
 
 </div>
 <br></br>
