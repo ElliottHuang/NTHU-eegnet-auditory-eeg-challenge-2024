@@ -44,6 +44,18 @@ python dilated_convolutional_model.py
 ```
 This command is designed for both training and testing the model. Simply run it to initiate the desired operation.
 
+If you run the code successfully, the model will start training and print the training statistics.
+
+<div align="center">
+    <a href="./">
+        <img src="./figures/model1.png" width="40%"/>
+    </a>
+    <a href="./">
+        <img src="./figures/model2.png" width="40%"/>
+    </a>
+</div>
+<br></br>
+
 # Performance
 
 We've tried multiple methodologies to enhance the performance of our model. The graphical representation below encapsulates our journey, presenting both the accuracy and loss metrics:
@@ -57,11 +69,10 @@ We've tried multiple methodologies to enhance the performance of our model. The 
 Here is our ultimate score in the challenge, captured in the image below, extracted directly from the leaderboard snapshot:
 <div align="center">
     <a href="./">
-        <img src="./figures/submission2score.png" width="30%"/>
+        <img src="./figures/submission2score.png" width="50%"/>
     </a>
     <p>Final score of our submission</p>
 </div>
-<br></br>
 <br></br>
 
 We secured the **24th** position out of **60** teams. Below, you'll find a comparative analysis of scores, encompassing the baseline, Team MLG (the counterpart focusing on the same topic), and our performance.
