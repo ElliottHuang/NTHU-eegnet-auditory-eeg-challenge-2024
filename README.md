@@ -23,7 +23,7 @@ We've tried multiple methodologies to enhance the performance of our model. The 
     <a href="./">
         <img src="./figures/plots.png" width="70%"/>
     </a>
-  <p>Final score of our submission</p>
+  <p>Training and validation accuracy/loss plots</p>
 </div>
 <br></br>
 Here is our ultimate score in the challenge, captured in the image below, extracted directly from the leaderboard snapshot:
@@ -31,6 +31,7 @@ Here is our ultimate score in the challenge, captured in the image below, extrac
     <a href="./">
         <img src="./figures/submission2score.png" width="30%"/>
     </a>
+    <p>Final score of our submission</p>
 </div>
 <br></br>
 <br></br>
